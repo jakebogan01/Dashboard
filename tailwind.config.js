@@ -10,6 +10,9 @@ module.exports = {
         sans: ['Nunito', ...defaultTheme.fontFamily.sans],
         inter: ['Inter', ...defaultTheme.fontFamily.sans],
       },
+      screens: {
+        '550': '34.375rem',
+      },
     },
   },
   plugins: [

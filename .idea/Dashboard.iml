@@ -6,5 +6,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="apexcharts" level="application" />
     <orderEntry type="library" name="styles" level="application" />
+    <orderEntry type="library" name="styles" level="application" />
+    <orderEntry type="library" name="apexcharts" level="application" />
   </component>
 </module>
