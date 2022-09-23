@@ -5,10 +5,129 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://raw.githubusercontent.com/apexcharts/apexcharts.js/master/samples/vanilla-js/dashboards/modern/assets/styles.css" rel="stylesheet">
     <link href="/dist/app.css" rel="stylesheet">
-    <script src="/dist/app.js"></script>
+    <script src="/dist/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
-<body x-data="{counter: 5}">
-    <h2 class="font-bold text-red-500" x-text="counter"></h2>
+<body class="antialiased bg-black text-white font-inter">
+    <main class="py-10">
+        <section class="px-8">
+            <div class="mb-5">
+                <svg width="26" height="21" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.833252 1.49541C0.833252 0.991245 1.24209 0.583328 1.74534 0.583328H9.08784C9.32973 0.583328 9.56173 0.679422 9.73278 0.850471C9.90382 1.02152 9.99992 1.25351 9.99992 1.49541C9.99992 1.73731 9.90382 1.9693 9.73278 2.14035C9.56173 2.3114 9.32973 2.40749 9.08784 2.40749H1.74534C1.50344 2.40749 1.27144 2.3114 1.1004 2.14035C0.929346 1.9693 0.833252 1.73731 0.833252 1.49541Z" fill="white"/><path d="M0.833252 6.99999C0.833252 6.49582 1.24209 6.08791 1.74534 6.08791H18.2545C18.4964 6.08791 18.7284 6.184 18.8994 6.35505C19.0705 6.5261 19.1666 6.75809 19.1666 6.99999C19.1666 7.24189 19.0705 7.47388 18.8994 7.64493C18.7284 7.81598 18.4964 7.91207 18.2545 7.91207H1.74534C1.50344 7.91207 1.27144 7.81598 1.1004 7.64493C0.929346 7.47388 0.833252 7.24189 0.833252 6.99999Z" fill="white"/><path d="M1.74534 11.5925C1.50344 11.5925 1.27144 11.6886 1.10039 11.8596C0.929346 12.0307 0.833252 12.2627 0.833252 12.5046C0.833252 12.7465 0.929346 12.9785 1.10039 13.1495C1.27144 13.3206 1.50344 13.4167 1.74534 13.4167H12.7545C12.9964 13.4167 13.2284 13.3206 13.3994 13.1495C13.5705 12.9785 13.6666 12.7465 13.6666 12.5046C13.6666 12.2627 13.5705 12.0307 13.3994 11.8596C13.2284 11.6886 12.9964 11.5925 12.7545 11.5925H1.74534Z" fill="white"/></svg>
+            </div>
+            <div>
+                <h1 class="font-medium text-[2.5rem] mb-3">My Dashboard</h1>
+                <h4 class="font-semibold text-sm">Hi, Welcome Back</h4>
+            </div>
+        </section>
+        <section class="px-8 mt-10">
+            <div class="flex justify-end">
+                <div class="flex justify-center items-center rounded-2xl bg-[#272727] w-[3.625rem] h-[3.625rem]">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.25 11.375C19.25 11.1429 19.3422 10.9204 19.5063 10.7563C19.6704 10.5922 19.8929 10.5 20.125 10.5H21.875C22.1071 10.5 22.3296 10.5922 22.4937 10.7563C22.6578 10.9204 22.75 11.1429 22.75 11.375V13.125C22.75 13.3571 22.6578 13.5796 22.4937 13.7437C22.3296 13.9078 22.1071 14 21.875 14H20.125C19.8929 14 19.6704 13.9078 19.5063 13.7437C19.3422 13.5796 19.25 13.3571 19.25 13.125V11.375ZM14 11.375C14 11.1429 14.0922 10.9204 14.2563 10.7563C14.4204 10.5922 14.6429 10.5 14.875 10.5H16.625C16.8571 10.5 17.0796 10.5922 17.2437 10.7563C17.4078 10.9204 17.5 11.1429 17.5 11.375V13.125C17.5 13.3571 17.4078 13.5796 17.2437 13.7437C17.0796 13.9078 16.8571 14 16.625 14H14.875C14.6429 14 14.4204 13.9078 14.2563 13.7437C14.0922 13.5796 14 13.3571 14 13.125V11.375ZM5.25 16.625C5.25 16.3929 5.34219 16.1704 5.50628 16.0063C5.67038 15.8422 5.89294 15.75 6.125 15.75H7.875C8.10706 15.75 8.32962 15.8422 8.49372 16.0063C8.65781 16.1704 8.75 16.3929 8.75 16.625V18.375C8.75 18.6071 8.65781 18.8296 8.49372 18.9937C8.32962 19.1578 8.10706 19.25 7.875 19.25H6.125C5.89294 19.25 5.67038 19.1578 5.50628 18.9937C5.34219 18.8296 5.25 18.6071 5.25 18.375V16.625ZM10.5 16.625C10.5 16.3929 10.5922 16.1704 10.7563 16.0063C10.9204 15.8422 11.1429 15.75 11.375 15.75H13.125C13.3571 15.75 13.5796 15.8422 13.7437 16.0063C13.9078 16.1704 14 16.3929 14 16.625V18.375C14 18.6071 13.9078 18.8296 13.7437 18.9937C13.5796 19.1578 13.3571 19.25 13.125 19.25H11.375C11.1429 19.25 10.9204 19.1578 10.7563 18.9937C10.5922 18.8296 10.5 18.6071 10.5 18.375V16.625Z" fill="#B0B1B0"/><path d="M6.125 0C6.35706 0 6.57962 0.0921872 6.74372 0.256282C6.90781 0.420376 7 0.642936 7 0.875V1.75H21V0.875C21 0.642936 21.0922 0.420376 21.2563 0.256282C21.4204 0.0921872 21.6429 0 21.875 0C22.1071 0 22.3296 0.0921872 22.4937 0.256282C22.6578 0.420376 22.75 0.642936 22.75 0.875V1.75H24.5C25.4283 1.75 26.3185 2.11875 26.9749 2.77513C27.6313 3.4315 28 4.32174 28 5.25V24.5C28 25.4283 27.6313 26.3185 26.9749 26.9749C26.3185 27.6313 25.4283 28 24.5 28H3.5C2.57174 28 1.6815 27.6313 1.02513 26.9749C0.368749 26.3185 0 25.4283 0 24.5V5.25C0 4.32174 0.368749 3.4315 1.02513 2.77513C1.6815 2.11875 2.57174 1.75 3.5 1.75H5.25V0.875C5.25 0.642936 5.34219 0.420376 5.50628 0.256282C5.67038 0.0921872 5.89294 0 6.125 0V0ZM1.75 7V24.5C1.75 24.9641 1.93437 25.4092 2.26256 25.7374C2.59075 26.0656 3.03587 26.25 3.5 26.25H24.5C24.9641 26.25 25.4092 26.0656 25.7374 25.7374C26.0656 25.4092 26.25 24.9641 26.25 24.5V7H1.75Z" fill="#B0B1B0"/></svg>
+                </div>
+            </div>
+            <div class="flex justify-end text-[#898989] text-sm space-x-1 mt-[1.875rem]">
+                <div class="flex justify-center items-center rounded-full w-[5.625rem] h-[2.375rem] bg-white text-black">
+                    <span>Week</span>
+                </div>
+                <div class="flex justify-center items-center rounded-full w-[5.625rem] h-[2.375rem]">
+                    <span>Month</span>
+                </div>
+                <div class="flex justify-center items-center rounded-full w-[5.625rem] h-[2.375rem]">
+                    <span>Year</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 gap-6 mt-11">
+                <div class="flex flex-col justify-between h-44 rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black" style="background-image: url('/src/img/view-background.svg');">
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg">Views</span>
+                        <span>
+                            <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.375 4.063h11.25a2.25 2.25 0 0 1 2.25 2.25v3.375a2.25 2.25 0 0 1-2.25 2.25H2.375a2.25 2.25 0 0 1-2.25-2.25V6.312a2.25 2.25 0 0 1 2.25-2.25Zm0 1.125A1.125 1.125 0 0 0 1.25 6.313v3.375a1.125 1.125 0 0 0 1.125 1.124h11.25a1.125 1.125 0 0 0 1.125-1.124V6.312a1.125 1.125 0 0 0-1.125-1.125H2.375ZM.125 1.25A.563.563 0 0 1 .688.687h14.624a.562.562 0 1 1 0 1.125H.688a.562.562 0 0 1-.563-.562Zm0 13.5a.562.562 0 0 1 .563-.563h14.624a.562.562 0 1 1 0 1.126H.688a.563.563 0 0 1-.563-.563Z" fill="#000"/></svg>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="font-medium text-[2.5rem]">509k</span>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between h-44 rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black" style="background-image: url('/src/img/clients-background.svg');">
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg">Clients</span>
+                        <span>
+                            <svg width="20" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.438 5.906c-.154 2.169-1.72 3.938-3.438 3.938-1.719 0-3.287-1.769-3.437-3.938C6.406 3.65 7.93 1.97 10 1.97s3.594 1.722 3.438 3.937Z" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 12.469c-3.398 0-6.848 1.969-7.486 5.685-.077.447.165.877.611.877h13.75c.447 0 .688-.43.611-.877-.638-3.716-4.088-5.685-7.486-5.685Z" stroke="#000" stroke-miterlimit="10"/></svg>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="font-medium text-[2.5rem]">63</span>
+                    </div>
+                </div>
+                <div class="bg-[#272727] h-44 rounded-[1.6875rem] p-5 text-white">
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg">Purchases</span>
+                        <span>
+                            <svg width="15" height="23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.765 10.594h-4.53a2.618 2.618 0 0 1 0-5.236h7.25V3.545H8.632V.172H6.82v3.373H5.234a4.43 4.43 0 1 0 0 8.861h4.531a2.621 2.621 0 0 1 2.618 2.618v.202a2.62 2.62 0 0 1-2.617 2.618h-7.67v1.812H6.82v3.172h1.813v-3.172h1.133a4.435 4.435 0 0 0 4.43-4.43v-.202a4.435 4.435 0 0 0-4.43-4.43Z" fill="#fff"/></svg>
+                        </span>
+                    </div>
+                    <div>
+                        <div id="chart" class=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let options = {
+            chart: {
+                height: 150,
+                type: "radialBar",
+            },
+            series: [67, 84],
+            // colors: ["#000000"],
+            plotOptions: {
+                radialBar: {
+                    track: {
+                        background: '#444',
+                        dropShadow: {
+                            enabled: true,
+                            top: 2,
+                            left: 0,
+                            blur: 4,
+                            opacity: 0.15
+                        }
+                    },
+                    dataLabels: {
+                        name: {
+                            show: false,
+                        },
+                        value: {
+                            color: "#ffffff",
+                            fontSize: "1rem",
+                            show: true
+                        },
+                        total: {
+                            show: true,
+                            label: 'TOTAL',
+                            color: "#ffffff",
+                        }
+                    }
+                }
+            },
+            fill: {
+                colors : ["#56D7BF", "#ffffff"],
+            },
+            stroke: {
+                lineCap: "round"
+            },
+            labels: ['TEAM A', 'TEAM B']
+        };
+
+        let chart = new ApexCharts(document.querySelector("#chart"), options);
+
+        chart.render();
+    </script>
 </body>
 </html>
