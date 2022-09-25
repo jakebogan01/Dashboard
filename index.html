@@ -21,8 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://raw.githubusercontent.com/apexcharts/apexcharts.js/master/samples/vanilla-js/dashboards/modern/assets/styles.css" rel="stylesheet">
-    <link href="/dist/app.min.css" rel="stylesheet">
-    <script src="/dist/app.js" defer></script>
+    <link href="dist/app.min.css" rel="stylesheet">
+    <script src="dist/app.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
         [x-cloak] {
@@ -185,7 +185,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-11 transition-all">
-                    <div class="flex flex-col justify-between h-44 550:h-[12.75rem] rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black cursor-default border-2 border-[#000000] sm:hover:border-white transition-all" style="background-image: url('/src/img/content/view-background.svg');">
+                    <div class="flex flex-col justify-between h-44 550:h-[12.75rem] rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black cursor-default border-2 border-[#000000] sm:hover:border-white transition-all" style="background-image: url('dist/img/content/view-background.svg');">
                         <div class="flex justify-between items-center">
                             <span class="text-lg">Views</span>
                             <span>
@@ -196,7 +196,7 @@
                             <span class="font-medium text-[2.5rem]">509k</span>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-between h-44 550:h-[12.75rem] rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black cursor-default border-2 border-[#000000] sm:hover:border-white transition-all" style="background-image: url('/src/img/content/clients-background.svg');">
+                    <div class="flex flex-col justify-between h-44 550:h-[12.75rem] rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black cursor-default border-2 border-[#000000] sm:hover:border-white transition-all" style="background-image: url('dist/img/content/clients-background.svg');">
                         <div class="flex justify-between items-center">
                             <span class="text-lg">Clients</span>
                             <span>
@@ -233,7 +233,7 @@
         <section class="px-8 mt-10 sm:px-14 lg:px-6 lg:pt-16 lg:w-[40%] xl:w-[35%] pb-10 2xl:pb-0 2xl:pr-[3.75rem] 2xl:pt-24 2xl:mt-0 transition-all">
             <div>
                 <div class="h-[12.75rem] 550:h-[13.25rem] sm:h-[23.625rem] group rounded-[1.6875rem] transition-all overflow-hidden" style="will-change: transform;">
-                    <img src="/src/img/content/building-1.webp" alt="building-1" class="100% sm:group-hover:scale-110 transform rounded-[1.6875rem] transition-all duration-500">
+                    <img src="dist/img/content/building-1.webp" alt="building-1" class="100% sm:group-hover:scale-110 transform rounded-[1.6875rem] transition-all duration-500">
                 </div>
             </div>
             <div class="relative flex justify-between mt-8" @click.away="showSettings = false" @close.stop="showSettings = false">
@@ -269,7 +269,7 @@
             <div class="grid grid-cols-1 gap-6 mt-6 text-[#898989] h-[25.25rem] 550:text-xl bg-[#111111] rounded-[1.6875rem] transition-all overflow-y-scroll">
                 <div class="flex justify-between items-center px-6 bg-[#272727] h-20 550:h-[7.3125rem] rounded-[1.6875rem] cursor-pointer border border-[#272727] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
-                        <img src="/src/img/content/building-1.webp" alt="building-1" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
+                        <img src="dist/img/content/building-1.webp" alt="building-1" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="text-white">Windmills Loft</p>
                     </div>
                     <div class="flex items-center space-x-2">
@@ -279,7 +279,7 @@
                 </div>
                 <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#111111] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
-                        <img src="/src/img/content/building-2.webp" alt="building-2" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
+                        <img src="dist/img/content/building-2.webp" alt="building-2" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="sm:group-hover:text-white transition-all">Sun-ville Loft</p>
                     </div>
                     <div class="flex items-center space-x-2">
@@ -289,7 +289,7 @@
                 </div>
                 <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#111111] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
-                        <img src="/src/img/content/building-4.webp" alt="building-4" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
+                        <img src="dist/img/content/building-4.webp" alt="building-4" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="sm:group-hover:text-white transition-all">Hallow Peek</p>
                     </div>
                     <div class="flex items-center space-x-2">
@@ -299,7 +299,7 @@
                 </div>
                 <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#111111] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
-                        <img src="/src/img/content/building-3.webp" alt="building-3" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
+                        <img src="dist/img/content/building-3.webp" alt="building-3" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="sm:group-hover:text-white transition-all">Family Villa</p>
                     </div>
                     <div class="flex items-center space-x-2">
@@ -309,7 +309,7 @@
                 </div>
                 <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#111111] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
-                        <img src="/src/img/content/building-5.webp" alt="building-5" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
+                        <img src="dist/img/content/building-5.webp" alt="building-5" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="sm:group-hover:text-white transition-all">Costly Rock</p>
                     </div>
                     <div class="flex items-center space-x-2">
@@ -345,6 +345,6 @@
         <span>Created By <a href="https://jakebogan.dev" target="_blank" class="sm:hover:text-[#999999] underline sm:hover:no-underline">Jake Bogan</a> 2022</span>
     </footer>
 
-    <script src="js/apex-chart.js"></script>
+    <script src="dist/js/apex-chart.js"></script>
 </body>
 </html>
