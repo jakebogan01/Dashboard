@@ -1,6 +1,6 @@
 let pieOptions = {
     chart: {
-        height: 150,
+        height: '100%',
         type: "radialBar",
     },
     series: [67, 84],
@@ -61,8 +61,11 @@ let areaOptions = {
         toolbar: {
             show: false
         },
-        height: 350, //470
+        height: '100%',
         type: 'area',
+    },
+    markers: {
+        size: [4, 7],
     },
     dataLabels: {
         enabled: false

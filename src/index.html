@@ -16,9 +16,31 @@
         [x-cloak] {
             display: none !important;
         }
+        html {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            -webkit-scroll-behavior: smooth;
+            -moz-scroll-behavior: smooth;
+            -ms-scroll-behavior: smooth;
+            -o-scroll-behavior: smooth;
+            scroll-behavior: smooth;
+        }
+        *, *::before, *::after{
+            scrollbar-width: 0.625rem !important;
+            scrollbar-color: #222222;
+        }
+        ::-webkit-scrollbar{
+            width: 0.625rem !important;
+            background-color: #000000;
+        }
+        ::-webkit-scrollbar-thumb{
+            border-radius: 0.375rem;
+            background: #222222;
+            border: 0.1875rem solid #000000;
+        }
     </style>
 </head>
-<body class="antialiased bg-black h-full text-white font-inter overflow-x-hidden" x-data="{ showMenu: false }">
+<body class="antialiased bg-black text-white font-inter overflow-x-hidden" x-data="{ showMenu: false }">
     <div class="relative 2xl:hidden z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true"
          x-show="showMenu"
          x-cloak
@@ -28,21 +50,21 @@
          x-transition:leave="transition ease-in-out duration-500"
          x-transition:leave-start="opacity-100"
          x-transition:leave-end="opacity-0">
-
         <div class="fixed inset-0 bg-black bg-opacity-60 transition-opacity"></div>
-
         <div class="fixed inset-0 overflow-hidden">
             <div class="absolute inset-0 overflow-hidden">
                 <div class="pointer-events-none fixed inset-y-0 left-0 flex max-w-full pr-10"
                      x-show="showMenu"
-                     x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+                     x-cloak
+                     x-transition:enter="transform transition ease-in-out duration-500"
                      x-transition:enter-start="-translate-x-full"
                      x-transition:enter-end="translate-x-0"
-                     x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700"
+                     x-transition:leave="transform transition ease-in-out duration-500"
                      x-transition:leave-start="translate-x-0"
                      x-transition:leave-end="-translate-x-full">
                     <div class="pointer-events-auto relative w-screen max-w-[5.375rem]"
                          x-show="showMenu"
+                         x-cloak
                          x-transition:enter="ease-in-out duration-500"
                          x-transition:enter-start="opacity-0"
                          x-transition:enter-end="opacity-100"
@@ -55,16 +77,18 @@
                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
                             </button>
                         </div>
-                        <div class="flex h-full flex-col overflow-y-auto bg-white py-9 px-6 shadow-xl space-y-[1.625rem]">
-                            <a href="#" class="flex justify-center">
-                                <svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.422V0h11.578v14.422H0ZM0 26v-8.667h11.578V26H0Zm14.422 0V11.578H26V26H14.422Zm0-26H26v8.667H14.422V0Z" fill="#000"/></svg>
-                            </a>
-                            <a href="#" class="flex justify-center">
-                                <svg width="31" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.792 2.65v11.558H28.35C27.744 8.116 22.885 3.256 16.79 2.65Zm6.418 23.189c2.828-2.115 4.771-5.348 5.14-9.047H17.782l5.429 9.046Z" fill="#C7C7C7"/><path d="M14.208 15.5V2.65C7.69 3.3 2.583 8.813 2.583 15.5c0 7.122 5.795 12.917 12.917 12.917a12.826 12.826 0 0 0 5.496-1.245s-6.785-11.516-6.786-11.665l-.002-.007Z" fill="#C7C7C7"/></svg>
-                            </a>
-                            <a href="#" class="flex justify-center">
-                                <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1C12.927 1 8 5.5 8 10.961 8 17.714 19 27 19 27s11-9.286 11-16.039C30 5 25.073 1 19 1Zm0 14.182c-.87 0-1.72-.198-2.445-.57-.723-.37-1.287-.898-1.62-1.515a2.656 2.656 0 0 1-.25-1.95c.17-.656.588-1.257 1.204-1.73.615-.472 1.4-.793 2.253-.924a5.65 5.65 0 0 1 2.542.193c.804.255 1.491.688 1.974 1.243.484.556.742 1.208.742 1.876-.001.895-.465 1.754-1.29 2.387s-1.943.989-3.11.99Z" fill="#C7C7C7"/><path d="M24 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="#fff"/></svg>
-                            </a>
+                        <div class="flex h-full flex-col justify-between overflow-y-auto bg-white py-9 px-6 shadow-xl">
+                            <div class="space-y-[1.625rem]">
+                                <a href="#" class="flex justify-center">
+                                    <svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.422V0h11.578v14.422H0ZM0 26v-8.667h11.578V26H0Zm14.422 0V11.578H26V26H14.422Zm0-26H26v8.667H14.422V0Z" fill="#000"/></svg>
+                                </a>
+                                <a href="#" class="flex justify-center">
+                                    <svg width="31" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.792 2.65v11.558H28.35C27.744 8.116 22.885 3.256 16.79 2.65Zm6.418 23.189c2.828-2.115 4.771-5.348 5.14-9.047H17.782l5.429 9.046Z" fill="#C7C7C7"/><path d="M14.208 15.5V2.65C7.69 3.3 2.583 8.813 2.583 15.5c0 7.122 5.795 12.917 12.917 12.917a12.826 12.826 0 0 0 5.496-1.245s-6.785-11.516-6.786-11.665l-.002-.007Z" fill="#C7C7C7"/></svg>
+                                </a>
+                                <a href="#" class="flex justify-center">
+                                    <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1C12.927 1 8 5.5 8 10.961 8 17.714 19 27 19 27s11-9.286 11-16.039C30 5 25.073 1 19 1Zm0 14.182c-.87 0-1.72-.198-2.445-.57-.723-.37-1.287-.898-1.62-1.515a2.656 2.656 0 0 1-.25-1.95c.17-.656.588-1.257 1.204-1.73.615-.472 1.4-.793 2.253-.924a5.65 5.65 0 0 1 2.542.193c.804.255 1.491.688 1.974 1.243.484.556.742 1.208.742 1.876-.001.895-.465 1.754-1.29 2.387s-1.943.989-3.11.99Z" fill="#C7C7C7"/><path d="M24 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="#fff"/></svg>
+                                </a>
+                            </div>
                             <a href="#" class="flex justify-center">
                                 <svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.873 14.3c.066-.39.066-.845.066-1.3 0-.455-.066-.845-.066-1.3l2.791-2.145c.267-.195.333-.52.134-.845l-2.66-4.485c-.133-.26-.531-.39-.798-.26l-3.324 1.3a9.676 9.676 0 0 0-2.26-1.3L16.291.52a.713.713 0 0 0-.665-.52h-5.319a.712.712 0 0 0-.665.52l-.531 3.445c-.798.325-1.53.78-2.261 1.3l-3.324-1.3c-.333-.13-.665 0-.798.26L.068 8.71c-.132.26-.066.65.134.845L3.06 11.7c0 .455-.067.845-.067 1.3 0 .455.067.845.067 1.3L.269 16.445c-.266.195-.333.52-.133.845l2.659 4.485c.133.26.532.39.798.26l3.324-1.3c.665.52 1.462.975 2.26 1.3l.532 3.445c.067.325.332.52.665.52h5.318c.333 0 .599-.26.665-.52l.533-3.445c.797-.325 1.529-.78 2.26-1.3l3.324 1.3c.332.13.665 0 .798-.26l2.659-4.485c.133-.26.066-.65-.133-.845L22.873 14.3Zm-9.906 3.25c-2.593 0-4.654-2.015-4.654-4.55 0-2.535 2.06-4.55 4.654-4.55 2.593 0 4.653 2.015 4.653 4.55 0 2.535-2.06 4.55-4.653 4.55Z" fill="#C7C7C7"/></svg>
                             </a>
@@ -75,23 +99,35 @@
         </div>
     </div>
 
-    <main class="flex flex-col lg:flex-row h-full">
-        <div class="hidden 2xl:flex flex-col overflow-y-auto bg-white py-9 px-6 mr-4 space-y-[1.625rem]">
-            <a href="#" class="flex justify-center">
-                <svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.422V0h11.578v14.422H0ZM0 26v-8.667h11.578V26H0Zm14.422 0V11.578H26V26H14.422Zm0-26H26v8.667H14.422V0Z" fill="#000"/></svg>
-            </a>
-            <a href="#" class="flex justify-center">
-                <svg width="31" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.792 2.65v11.558H28.35C27.744 8.116 22.885 3.256 16.79 2.65Zm6.418 23.189c2.828-2.115 4.771-5.348 5.14-9.047H17.782l5.429 9.046Z" fill="#C7C7C7"/><path d="M14.208 15.5V2.65C7.69 3.3 2.583 8.813 2.583 15.5c0 7.122 5.795 12.917 12.917 12.917a12.826 12.826 0 0 0 5.496-1.245s-6.785-11.516-6.786-11.665l-.002-.007Z" fill="#C7C7C7"/></svg>
-            </a>
-            <a href="#" class="flex justify-center">
-                <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1C12.927 1 8 5.5 8 10.961 8 17.714 19 27 19 27s11-9.286 11-16.039C30 5 25.073 1 19 1Zm0 14.182c-.87 0-1.72-.198-2.445-.57-.723-.37-1.287-.898-1.62-1.515a2.656 2.656 0 0 1-.25-1.95c.17-.656.588-1.257 1.204-1.73.615-.472 1.4-.793 2.253-.924a5.65 5.65 0 0 1 2.542.193c.804.255 1.491.688 1.974 1.243.484.556.742 1.208.742 1.876-.001.895-.465 1.754-1.29 2.387s-1.943.989-3.11.99Z" fill="#C7C7C7"/><path d="M24 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="#fff"/></svg>
-            </a>
-            <a href="#" class="flex justify-center">
-                <svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.873 14.3c.066-.39.066-.845.066-1.3 0-.455-.066-.845-.066-1.3l2.791-2.145c.267-.195.333-.52.134-.845l-2.66-4.485c-.133-.26-.531-.39-.798-.26l-3.324 1.3a9.676 9.676 0 0 0-2.26-1.3L16.291.52a.713.713 0 0 0-.665-.52h-5.319a.712.712 0 0 0-.665.52l-.531 3.445c-.798.325-1.53.78-2.261 1.3l-3.324-1.3c-.333-.13-.665 0-.798.26L.068 8.71c-.132.26-.066.65.134.845L3.06 11.7c0 .455-.067.845-.067 1.3 0 .455.067.845.067 1.3L.269 16.445c-.266.195-.333.52-.133.845l2.659 4.485c.133.26.532.39.798.26l3.324-1.3c.665.52 1.462.975 2.26 1.3l.532 3.445c.067.325.332.52.665.52h5.318c.333 0 .599-.26.665-.52l.533-3.445c.797-.325 1.529-.78 2.26-1.3l3.324 1.3c.332.13.665 0 .798-.26l2.659-4.485c.133-.26.066-.65-.133-.845L22.873 14.3Zm-9.906 3.25c-2.593 0-4.654-2.015-4.654-4.55 0-2.535 2.06-4.55 4.654-4.55 2.593 0 4.653 2.015 4.653 4.55 0 2.535-2.06 4.55-4.653 4.55Z" fill="#C7C7C7"/></svg>
-            </a>
+    <main class="flex flex-col lg:flex-row h-full max-w-[112.5rem] mx-auto">
+        <div class="hidden 2xl:block relative z-10" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+            <div class="fixed overflow-hidden">
+                <div class="absolute overflow-hidden">
+                    <div class="pointer-events-none fixed inset-y-0 left-0 flex max-w-full pr-10">
+                        <div class="pointer-events-auto relative w-screen max-w-[5.375rem]">
+                            <div class="flex h-full flex-col justify-between overflow-y-auto bg-white py-9 px-6 shadow-xl">
+                                <div class="space-y-[1.625rem]">
+                                    <a href="#" class="flex justify-center">
+                                        <svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 14.422V0h11.578v14.422H0ZM0 26v-8.667h11.578V26H0Zm14.422 0V11.578H26V26H14.422Zm0-26H26v8.667H14.422V0Z" fill="#000"/></svg>
+                                    </a>
+                                    <a href="#" class="flex justify-center">
+                                        <svg width="31" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.792 2.65v11.558H28.35C27.744 8.116 22.885 3.256 16.79 2.65Zm6.418 23.189c2.828-2.115 4.771-5.348 5.14-9.047H17.782l5.429 9.046Z" fill="#C7C7C7"/><path d="M14.208 15.5V2.65C7.69 3.3 2.583 8.813 2.583 15.5c0 7.122 5.795 12.917 12.917 12.917a12.826 12.826 0 0 0 5.496-1.245s-6.785-11.516-6.786-11.665l-.002-.007Z" fill="#C7C7C7"/></svg>
+                                    </a>
+                                    <a href="#" class="flex justify-center">
+                                        <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 1C12.927 1 8 5.5 8 10.961 8 17.714 19 27 19 27s11-9.286 11-16.039C30 5 25.073 1 19 1Zm0 14.182c-.87 0-1.72-.198-2.445-.57-.723-.37-1.287-.898-1.62-1.515a2.656 2.656 0 0 1-.25-1.95c.17-.656.588-1.257 1.204-1.73.615-.472 1.4-.793 2.253-.924a5.65 5.65 0 0 1 2.542.193c.804.255 1.491.688 1.974 1.243.484.556.742 1.208.742 1.876-.001.895-.465 1.754-1.29 2.387s-1.943.989-3.11.99Z" fill="#C7C7C7"/><path d="M24 12a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z" fill="#fff"/></svg>
+                                    </a>
+                                </div>
+                                <a href="#" class="flex justify-center">
+                                    <svg width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22.873 14.3c.066-.39.066-.845.066-1.3 0-.455-.066-.845-.066-1.3l2.791-2.145c.267-.195.333-.52.134-.845l-2.66-4.485c-.133-.26-.531-.39-.798-.26l-3.324 1.3a9.676 9.676 0 0 0-2.26-1.3L16.291.52a.713.713 0 0 0-.665-.52h-5.319a.712.712 0 0 0-.665.52l-.531 3.445c-.798.325-1.53.78-2.261 1.3l-3.324-1.3c-.333-.13-.665 0-.798.26L.068 8.71c-.132.26-.066.65.134.845L3.06 11.7c0 .455-.067.845-.067 1.3 0 .455.067.845.067 1.3L.269 16.445c-.266.195-.333.52-.133.845l2.659 4.485c.133.26.532.39.798.26l3.324-1.3c.665.52 1.462.975 2.26 1.3l.532 3.445c.067.325.332.52.665.52h5.318c.333 0 .599-.26.665-.52l.533-3.445c.797-.325 1.529-.78 2.26-1.3l3.324 1.3c.332.13.665 0 .798-.26l2.659-4.485c.133-.26.066-.65-.133-.845L22.873 14.3Zm-9.906 3.25c-2.593 0-4.654-2.015-4.654-4.55 0-2.535 2.06-4.55 4.654-4.55 2.593 0 4.653 2.015 4.653 4.55 0 2.535-2.06 4.55-4.653 4.55Z" fill="#C7C7C7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="lg:w-[60%] lg:py-10 2xl:pl-5 2xl:pt-24 transition-all">
+        <div class="lg:w-[60%] xl:w-[65%] 2xl:ml-[6.3rem] lg:py-10 2xl:pl-5 2xl:pt-24 transition-all">
             <section class="px-8 sm:px-14 lg:px-6 pt-10 lg:pt-0 transition-all">
                 <button type="button" class="mb-10 2xl:hidden" @click="showMenu = !showMenu">
                     <span class="sr-only">Open panel</span>
@@ -104,7 +140,7 @@
             </section>
 
             <section class="px-8 mt-10 sm:px-14 lg:px-6 xl:mt-5 transition-all">
-                <div class="flex justify-end items-center text-[#898989] text-sm space-x-1 mt-[1.875rem]">
+                <div class="flex justify-end items-center text-[#898989] text-sm space-x-2 mt-[1.875rem]">
                     <div class="flex justify-center items-center rounded-full w-[5.625rem] h-[2.375rem] bg-white text-black cursor-pointer">
                         <span>Week</span>
                     </div>
@@ -119,7 +155,7 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-11 transition-all">
-                    <div class="flex flex-col justify-between h-44 550:h-[12.75rem] rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black cursor-default transition-all" style="background-image: url('/src/img/view-background.svg');">
+                    <div class="flex flex-col justify-between h-44 550:h-[12.75rem] rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black cursor-default transition-all" style="background-image: url('/src/img/content/view-background.svg');">
                         <div class="flex justify-between items-center">
                             <span class="text-lg">Views</span>
                             <span>
@@ -130,7 +166,7 @@
                             <span class="font-medium text-[2.5rem]">509k</span>
                         </div>
                     </div>
-                    <div class="flex flex-col justify-between h-44 550:h-[12.75rem] rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black cursor-default transition-all" style="background-image: url('/src/img/clients-background.svg');">
+                    <div class="flex flex-col justify-between h-44 550:h-[12.75rem] rounded-[1.6875rem] bg-center bg-cover bg-no-repeat p-5 text-black cursor-default transition-all" style="background-image: url('/src/img/content/clients-background.svg');">
                         <div class="flex justify-between items-center">
                             <span class="text-lg">Clients</span>
                             <span>
@@ -141,7 +177,7 @@
                             <span class="font-medium text-[2.5rem]">63</span>
                         </div>
                     </div>
-                    <div class="relative bg-[#272727] h-44 550:h-[12.75rem] rounded-[1.6875rem] p-5 text-white cursor-default transition-all">
+                    <div class="relative bg-[#272727] h-44 550:h-[12.75rem] rounded-[1.6875rem] p-5 text-white cursor-default transition-all overflow-hidden">
                         <div class="flex justify-between items-center">
                             <span class="text-lg">Purchases</span>
                             <span>
@@ -159,14 +195,14 @@
                 </div>
             </section>
 
-            <section class="px-4 mt-14 sm:px-14 lg:px-2 transition-all overflow-hidden">
+            <section class="h-[21.875rem] xl:h-[29rem] px-4 mt-[6.25rem] mb-[3.75rem] lg:mb-0 lg:mt-16 sm:px-14 lg:px-2 transition-all overflow-hidden">
                 <div id="areaChart"></div>
             </section>
         </div>
 
-        <section class="px-8 mt-10 sm:px-14 lg:px-6 lg:w-[40%] pb-10 2xl:pb-0 2xl:pr-[3.75rem] 2xl:pt-24 2xl:mt-0 transition-all">
+        <section class="px-8 mt-10 sm:px-14 lg:px-6 lg:pt-16 lg:w-[40%] xl:w-[35%] pb-10 2xl:pb-0 2xl:pr-[3.75rem] 2xl:pt-24 2xl:mt-0 transition-all">
             <div>
-                <div class="h-48 550:h-[13.25rem] sm:h-[23.625rem] rounded-[1.6875rem] bg-right-top bg-cover bg-no-repeat transition-all" style="background-image: url('/src/img/content/building-1.jpg');');"></div>
+                <div class="h-[12.75rem] 550:h-[13.25rem] sm:h-[23.625rem] rounded-[1.6875rem] bg-right-top bg-cover bg-no-repeat transition-all" style="background-image: url('/src/img/content/building-1.jpg');"></div>
             </div>
             <div class="flex justify-between mt-8">
                 <div class="flex text-[#898989] text-sm space-x-1">
@@ -181,7 +217,7 @@
                     <svg width="6" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5A2.507 2.507 0 0 0 .5 10c0 1.375 1.125 2.5 2.5 2.5s2.5-1.125 2.5-2.5S4.375 7.5 3 7.5ZM3 0A2.507 2.507 0 0 0 .5 2.5C.5 3.875 1.625 5 3 5s2.5-1.125 2.5-2.5S4.375 0 3 0Zm0 15a2.507 2.507 0 0 0-2.5 2.5C.5 18.875 1.625 20 3 20s2.5-1.125 2.5-2.5S4.375 15 3 15Z" fill="#3E3E3E"/></svg>
                 </button>
             </div>
-            <div class="grid grid-cols-1 gap-6 mt-6 text-[#898989] h-[34.25rem] 550:text-xl transition-all overflow-y-scroll">
+            <div class="grid grid-cols-1 gap-6 mt-6 text-[#898989] h-[25.25rem] 550:text-xl bg-[#111111] rounded-[1.6875rem] transition-all overflow-y-scroll">
                 <div class="flex justify-between items-center px-6 bg-[#272727] h-20 550:h-[7.3125rem] rounded-[1.6875rem] cursor-pointer transition-all">
                     <div class="flex items-center space-x-3">
                         <img src="/src/img/content/building-1.jpg" alt="building-1" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
