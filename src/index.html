@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://raw.githubusercontent.com/apexcharts/apexcharts.js/master/samples/vanilla-js/dashboards/modern/assets/styles.css" rel="stylesheet">
-    <link href="/dist/app.min.css" rel="stylesheet">
+    <link href="/dist/app.css" rel="stylesheet">
     <script src="/dist/app.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
@@ -157,7 +157,11 @@
             <section class="px-8 sm:px-14 lg:px-6 pt-10 lg:pt-0 transition-all">
                 <button type="button" class="mb-10 2xl:hidden" @click="showMenu = !showMenu">
                     <span class="sr-only">Open panel</span>
-                    <svg class="cursor-pointer" width="26" height="21" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.833252 1.49541C0.833252 0.991245 1.24209 0.583328 1.74534 0.583328H9.08784C9.32973 0.583328 9.56173 0.679422 9.73278 0.850471C9.90382 1.02152 9.99992 1.25351 9.99992 1.49541C9.99992 1.73731 9.90382 1.9693 9.73278 2.14035C9.56173 2.3114 9.32973 2.40749 9.08784 2.40749H1.74534C1.50344 2.40749 1.27144 2.3114 1.1004 2.14035C0.929346 1.9693 0.833252 1.73731 0.833252 1.49541Z" fill="white"/><path d="M0.833252 6.99999C0.833252 6.49582 1.24209 6.08791 1.74534 6.08791H18.2545C18.4964 6.08791 18.7284 6.184 18.8994 6.35505C19.0705 6.5261 19.1666 6.75809 19.1666 6.99999C19.1666 7.24189 19.0705 7.47388 18.8994 7.64493C18.7284 7.81598 18.4964 7.91207 18.2545 7.91207H1.74534C1.50344 7.91207 1.27144 7.81598 1.1004 7.64493C0.929346 7.47388 0.833252 7.24189 0.833252 6.99999Z" fill="white"/><path d="M1.74534 11.5925C1.50344 11.5925 1.27144 11.6886 1.10039 11.8596C0.929346 12.0307 0.833252 12.2627 0.833252 12.5046C0.833252 12.7465 0.929346 12.9785 1.10039 13.1495C1.27144 13.3206 1.50344 13.4167 1.74534 13.4167H12.7545C12.9964 13.4167 13.2284 13.3206 13.3994 13.1495C13.5705 12.9785 13.6666 12.7465 13.6666 12.5046C13.6666 12.2627 13.5705 12.0307 13.3994 11.8596C13.2284 11.6886 12.9964 11.5925 12.7545 11.5925H1.74534Z" fill="white"/></svg>
+                    <span class="block w-[30px] space-y-[5px] group">
+                        <span class="block bg-white w-[12px] h-[2px] rounded-full group-hover:w-full transition-all duration-300"></span>
+                        <span class="block bg-white w-[24px] h-[2px] rounded-full group-hover:w-full transition-all duration-300"></span>
+                        <span class="block bg-white w-[17px] h-[2px] rounded-full group-hover:w-full transition-all duration-300"></span>
+                    </span>
                 </button>
                 <div class="cursor-default">
                     <h1 class="font-medium text-[2.5rem] mb-5 leading-8">My Dashboard</h1>

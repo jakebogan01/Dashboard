@@ -12,5 +12,7 @@
     "/dist/img/favicon-16x16.png": "/dist/img/favicon-16x16.png",
     "/dist/img/favicon-32x32.png": "/dist/img/favicon-32x32.png",
     "/dist/img/fb-og-image.png": "/dist/img/fb-og-image.png",
+    "/dist/js/apex-chart.js": "/dist/js/apex-chart.js",
+    "/dist/js/app.js": "/dist/js/app.js",
     "/index.html": "/index.html"
 }
