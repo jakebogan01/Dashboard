@@ -58,17 +58,19 @@ let areaOptions = {
         show: false
     },
     chart: {
+        sparkline: {enabled: true},
         toolbar: {
             show: false
         },
         height: '100%',
         type: 'area',
     },
-    markers: {
-        size: [4, 7],
-    },
     dataLabels: {
-        enabled: false
+        enabled: true,
+        background: {
+            enabled: true,
+            foreColor: '#666',
+        },
     },
     legend: {
         show: true,
