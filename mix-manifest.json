@@ -1,5 +1,16 @@
 {
     "/dist/app.js": "/dist/app.js",
     "/dist/app.css": "/dist/app.css",
+    "/dist/img/apple-touch-icon.png": "/dist/img/apple-touch-icon.png",
+    "/dist/img/content/building-1.webp": "/dist/img/content/building-1.webp",
+    "/dist/img/content/building-2.webp": "/dist/img/content/building-2.webp",
+    "/dist/img/content/building-3.webp": "/dist/img/content/building-3.webp",
+    "/dist/img/content/building-4.webp": "/dist/img/content/building-4.webp",
+    "/dist/img/content/building-5.webp": "/dist/img/content/building-5.webp",
+    "/dist/img/content/clients-background.svg": "/dist/img/content/clients-background.svg",
+    "/dist/img/content/view-background.svg": "/dist/img/content/view-background.svg",
+    "/dist/img/favicon-16x16.png": "/dist/img/favicon-16x16.png",
+    "/dist/img/favicon-32x32.png": "/dist/img/favicon-32x32.png",
+    "/dist/img/fb-og-image.png": "/dist/img/fb-og-image.png",
     "/index.html": "/index.html"
 }

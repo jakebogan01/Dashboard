@@ -9,4 +9,5 @@ mix.js('src/js/app.js', 'dist')
     ]);
 
 mix.copy('src/img', 'dist/img');
+mix.copy('src/js', 'dist/js');
 mix.copy('src/index.html', './');
