@@ -216,8 +216,8 @@
 
         <section class="px-8 mt-10 sm:px-14 lg:px-6 lg:pt-16 lg:w-[40%] xl:w-[35%] pb-10 2xl:pb-0 2xl:pr-[3.75rem] 2xl:pt-24 2xl:mt-0 transition-all">
             <div>
-                <div class="h-[12.75rem] 550:h-[13.25rem] sm:h-[23.625rem] group rounded-[1.6875rem] transition-all overflow-hidden">
-                    <img src="/src/img/content/building-1.jpg" alt="building-1" class="100% sm:group-hover:scale-110 transform transition-all duration-500">
+                <div class="h-[12.75rem] 550:h-[13.25rem] sm:h-[23.625rem] group rounded-[1.6875rem] transition-all overflow-hidden" style="will-change: transform;">
+                    <img src="/src/img/content/building-1.jpg" alt="building-1" class="100% sm:group-hover:scale-110 transform rounded-[1.6875rem] transition-all duration-500">
                 </div>
             </div>
             <div class="relative flex justify-between mt-8" @click.away="showSettings = false" @close.stop="showSettings = false">
@@ -243,9 +243,9 @@
                      x-transition:leave-end="opacity-0 translate-y-1">
                     <div class="relative rounded-md shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div class="relative grid bg-white">
-                            <a class="block px-4 py-1.5 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" href="https://dossier.test/user/profile">Sort By New</a>
+                            <span class="block px-4 py-1.5 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition cursor-pointer">Sort By New</span>
                             <hr>
-                            <a class="block px-4 py-1.5 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition" href="https://dossier.test/user/profile">Sort By Old</a>
+                            <span class="block px-4 py-1.5 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition cursor-pointer">Sort By Old</span>
                         </div>
                     </div>
                 </div>
@@ -261,7 +261,7 @@
                         <span class="text-white text-sm">25%</span>
                     </div>
                 </div>
-                <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#272727] sm:hover:border-white transition-all">
+                <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#111111] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
                         <img src="/src/img/content/building-2.jpg" alt="building-2" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="sm:group-hover:text-white transition-all">Sun-ville Loft</p>
@@ -271,7 +271,7 @@
                         <span class="text-sm sm:group-hover:text-white transition-all">15%</span>
                     </div>
                 </div>
-                <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#272727] sm:hover:border-white transition-all">
+                <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#111111] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
                         <img src="/src/img/content/building-4.jpg" alt="building-4" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="sm:group-hover:text-white transition-all">Hallow Peek</p>
@@ -281,7 +281,7 @@
                         <span class="text-sm sm:group-hover:text-white transition-all">2%</span>
                     </div>
                 </div>
-                <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#272727] sm:hover:border-white transition-all">
+                <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#111111] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
                         <img src="/src/img/content/building-3.jpg" alt="building-3" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="sm:group-hover:text-white transition-all">Family Villa</p>
@@ -291,7 +291,7 @@
                         <span class="text-sm sm:group-hover:text-white transition-all">3%</span>
                     </div>
                 </div>
-                <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#272727] sm:hover:border-white transition-all">
+                <div class="flex justify-between items-center group px-6 h-20 550:h-[7.3125rem] rounded-[1.6875rem] sm:hover:bg-[#272727] sm:hover:text-black cursor-pointer border border-[#111111] sm:hover:border-white transition-all">
                     <div class="flex items-center space-x-3">
                         <img src="/src/img/content/building-5.jpg" alt="building-5" class="w-[3.375rem] 550:w-[4.375rem] rounded-2xl transition-all">
                         <p class="sm:group-hover:text-white transition-all">Costly Rock</p>
